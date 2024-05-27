@@ -1,0 +1,29 @@
+.header {
+   color: #fff; 
+  padding: 20px 0; 
+  text-align: center; 
+  padding-bottom: 30px;
+}
+
+.digitaltitle-link {
+  text-decoration: none; 
+}
+
+.digitaltitle {
+  font-family: 'monospace'; 
+  font-size: 32px; 
+  margin: 0; 
+  padding-bottom: 20px;
+}
+
+.red-i {
+  color: #ff6666; 
+}
+
+.line {
+  width: 80%; 
+  height: 1px; 
+  background-color: #000; 
+  margin: 0 auto; 
+}
+ 
