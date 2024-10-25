@@ -16,7 +16,7 @@ const Footer = () => {
 // Inline CSS styles
 const styles = {
   footer: {
-    marginTop: '20px',  
+    marginTop: '25px',  
     textAlign: 'center',
     padding: '20px',
     backgroundColor: '#f8f9fa',

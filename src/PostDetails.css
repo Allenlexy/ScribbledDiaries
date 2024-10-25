@@ -124,6 +124,9 @@
     font-size: 20px;
   }
 
+  .centered-container{
+    margin-left: 35px;
+  }
   .content-container {
     font-size: 12px;
   }
