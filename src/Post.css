@@ -1,0 +1,70 @@
+/* Post.css */
+
+.Postauthorname{
+  color: #333;
+}
+
+.avatar{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.post-card {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .post-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    text-decoration: none; /* Remove blue underline */
+  }
+  
+  .post-title:hover {
+    color: #444; /* Optional hover effect */
+  }
+  
+  .post-author {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering author info */
+    margin-bottom: 10px;
+  }
+  
+  .post-author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .post-author a {
+    color: #333;
+    text-decoration: none; /* Remove blue underline */
+  }
+  
+  .post-author a:hover {
+    color: #555; /* Optional hover effect */
+  }
+  
+  .post-date {
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+  }
+  

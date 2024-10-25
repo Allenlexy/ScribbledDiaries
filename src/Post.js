@@ -1,23 +1,21 @@
+// Post.js
 import React from "react";
+import "./Post.css";
 
 const Post = ({ post }) => {
   return (
-    <div className="post-container">
-      <div className="post">
-        <div className="cover-container">
-          <img className="coverImg" src={post.coverPhoto.url} alt="Cover" />
-        </div>
-        <div className="txt">
-          <h2 className="title">{post.title}</h2>
-          <div className="author">
-            <img className="avatar" src={post.author.avatar.url} alt="Avatar" />
-            <strong>
-              <p>{post.author.name}</p>
-            </strong>
-            <p className="date">{post.datePublished}</p>
-          </div>
-        </div>
+    <div className="post-card">
+      <div className="post-title">{post.title}</div>
+
+      <div className="post-author">
+        <img
+          className="avatar"
+          src={post.author.avatar.url}
+          alt={post.author.name}
+        />
+        <div className="Postauthorname">{post.author.name}</div>
       </div>
+      <p className="post-date">{post.datePublished}</p>
     </div>
   );
 };

@@ -1,9 +1,10 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PostList from "./PostList";
-import Footer from "./components/Footer";
+import Footer from "./Footer";
 import Header from "./Header";
 import PostDetails from "./PostDetails";
+import "./App.css";
 
 const router = createBrowserRouter([
   {

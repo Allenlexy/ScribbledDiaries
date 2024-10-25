@@ -1,9 +1,12 @@
+// PostList.js
 import React, { useState, useEffect } from "react";
 import Post from "./Post";
 import { Link } from "react-router-dom";
+import Loader from "./Loader"; // Complex Loader
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchPosts();
@@ -46,23 +49,31 @@ const PostList = () => {
       );
       const data = await response.json();
       setPosts(data.data.posts);
+      setLoading(false);
     } catch (error) {
       console.error("Error:", error);
+      setLoading(false);
     }
   };
 
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
-    <div className="post-list">
-      {posts.map((post) => (
-        <Link
-          key={post.id}
-          style={{ textDecoration: "none" }}
-          to={`/posts/${post.id}`}
-          state={{ post }}
-        >
-          <Post key={post.id} post={post} />
-        </Link>
-      ))}
+    <div className="abstract-background">
+      <div className="post-list">
+        {posts.map((post) => (
+          <Link
+            key={post.id}
+            style={{ textDecoration: "none" }}
+            to={`/posts/${post.id}`}
+            state={{ post }}
+          >
+            <Post key={post.id} post={post} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
