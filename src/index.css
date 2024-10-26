@@ -14,9 +14,12 @@ code {
 
 
 .post-list {
+  margin-left: 125px;
   width: 100%; /* Full width to ensure it centers properly */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -31,7 +34,7 @@ code {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  min-height: 150px; /* Ensures all cards have at least this height */
+  min-height: 190px; /* Ensures all cards have at least this height */
   display: flex;
   min-width: 350px;
   flex-direction: column;
