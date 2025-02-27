@@ -1,70 +1,94 @@
-/* Post.css */
+/* Post Container - Glassmorphism Style */
+.post-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 350px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  overflow: hidden;
+}
 
-.Postauthorname{
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.post-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.post-title:hover {
+  color: #007bff;
+}
+
+/* Author Section */
+.post-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Postauthorname {
+  font-size: 14px;
+  font-weight: bold;
   color: #333;
 }
 
-.avatar{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+/* Date */
+.post-date {
+  font-size: 12px;
+  color: gray;
 }
-.post-card {
-    background-color: whitesmoke;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+
+/* Grid Layout for Posts */
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .post-card {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .posts-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  .post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  .post-title {
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    color: #333;
-    margin-bottom: 15px;
-    text-decoration: none; /* Remove blue underline */
-  }
-  
-  .post-title:hover {
-    color: #444; /* Optional hover effect */
-  }
-  
-  .post-author {
-    display: flex;
     align-items: center;
-    justify-content: center; /* Centering author info */
-    margin-bottom: 10px;
   }
-  
-  .post-author img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .post-author a {
-    color: #333;
-    text-decoration: none; /* Remove blue underline */
-  }
-  
-  .post-author a:hover {
-    color: #555; /* Optional hover effect */
-  }
-  
-  .post-date {
-    font-size: 14px;
-    color: gray;
-    text-align: center;
-  }
-  
+}
